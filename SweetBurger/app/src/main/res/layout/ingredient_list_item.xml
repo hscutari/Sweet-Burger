@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/padding_margin">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_not_found"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/padding_margin"/>
+
+    <TextView style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text"
+        tools:text="name"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/avatar" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/tieQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:inputType="number"
+        android:padding="@dimen/padding_margin"/>
+
+</RelativeLayout>

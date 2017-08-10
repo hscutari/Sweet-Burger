@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.dextra.sweetburger"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    ext {
+        retrofitVersion = '2.3.0'
+        okhttp3Version = '3.4.1'
+        rxVersion = '1.2.1'
+        circleImageVersion = '2.0.0'
+        mockVersion = '1.10.19'
+        glideVersion = '3.7.0'
+    }
+
+
+    compile "io.reactivex:rxjava:$rxVersion"
+    compile "io.reactivex:rxandroid:$rxVersion"
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$okhttp3Version"
+    compile "de.hdodenhof:circleimageview:$circleImageVersion"
+    compile "com.github.bumptech.glide:glide:$glideVersion"
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+    compile 'com.android.support:design:26.+'
+
+    testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:$mockVersion"
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+}

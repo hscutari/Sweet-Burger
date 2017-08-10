@@ -1,0 +1,37 @@
+algumas funcionalidades a serem implementadas
+
+ API
+    - Listar ingredientes expecificos
+    - Autenticação
+    - implementar regra de promoção na API e não diretamente no app
+    - (Alterar no documento fornecido a url /api/ingredientes para /api/ingrediente)
+    - Atualizar nomenclaturas da api mantendo um padrão unico
+    - Secionar o idioma das mensagens de retorno da api (Promoção)
+    - Construir uma GET de ingredientes passando um array de id' de hamburgers, assim consequimos
+       fazer somente uma requisicao por pedido
+    - Alterar API de pedido para aceitar a quantida de itens extras selecionados
+    - Extras aceitar um array e näo uma string
+
+ APP
+    - Finalizar carrinho
+    - Remover item do carrinho
+    - Efetuar pagamento
+    - Autenticação
+    - Alterar fluxo de customização de lanches
+
+
+---------------------------------------------------------------------------------------------------
+
+Algumas explicacoes sobre a arquitetura
+
+    - RelativeLayout/ConstraintLayout - usei para consequir alinhar os elementos na tela
+    - glide - Carregar as imagens de hamburgers e ingredientes
+    - circleimageview - criar uma imagem circular
+    - okhttp3 - Requisicao HTTP e cache
+    - retrofit2 - Utilizar API
+    - rxjava - Auxilia nas requisicoes http e callback
+    - junit - testes
+
+    MVP
+        - Ajuda a estruturar melhor o codigo em camadas, garantindo uma interacao mais facil
+        e dinamica entrea views e requests.

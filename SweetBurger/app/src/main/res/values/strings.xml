@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SweetBurger</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="msg_order_add">Adicionado com sucesso!</string>
+    <string name="msg_erro">Erro</string>
+    <string name="msg_ok">Ok</string>
+</resources>

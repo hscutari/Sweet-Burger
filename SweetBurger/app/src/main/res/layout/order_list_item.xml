@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_margin">
+
+    <TextView
+        android:id="@+id/number"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/padding_margin"
+        android:textColor="@color/primary_text"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_not_found"
+        android:layout_toRightOf="@+id/number"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/padding_margin"/>
+
+    <TextView style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text"
+        tools:text="name"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/avatar" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="description"
+        android:layout_below="@+id/name"
+        android:textColor="@color/secondary_text"
+        android:layout_toEndOf="@+id/avatar"
+        android:layout_toStartOf="@+id/value"/>
+
+    <TextView
+        android:id="@+id/value"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="value"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="@dimen/padding_margin"
+        android:textColor="@color/colorAccent"/>
+
+</RelativeLayout>
