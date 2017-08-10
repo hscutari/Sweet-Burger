@@ -5,7 +5,7 @@ package com.dextra.sweetburger.utilities;
  */
 
 public class Constants {
-    public static String API_URL = "http://192.168.0.173:8080";
+    public static String API_URL = "http://localhost:8080";
 
     public static long INGREDIENT_LETTUCE = 1;
     public static long INGREDIENT_BACON = 2;
